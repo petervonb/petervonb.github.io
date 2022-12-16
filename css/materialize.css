@@ -4771,6 +4771,10 @@ small {
   right: 0;
 }
 
+.card.minimal {
+  height: 150px;
+}
+
 .card.small {
   height: 300px;
 }

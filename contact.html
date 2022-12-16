@@ -25,52 +25,51 @@
 
 <main>
     <div class="container">
-        <div class="row">
-            <div class="col s12 m12">
-                <h3>About myself</h3>
-                <p>Let me introduce myself quickly:</p>
+
+        <div class="row valign-wrapper">
+            <div class="col s12 m12 l12 center-align">
+                <h3>CONTACT</h3>
+                <p class="grey-text">Leave me a message and I will reply to you as soon as possible.</p>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="row">
-            <div class="col s12 m12">
-                <p>After completing my training as an industrial clerk, I supported the management of Omega Technology
-                    in controlling with
-                    the development of various Qlik BI applications.
-                    It always appeals to me to implement sophisticated and intelligent solutions for the analysis of
-                    business processes and data in a team. I would like to support you with a final project for my
-                    bachelor thesis.
-
-                    In my Software Engineering studies at the Fontys University of Applied Sciences Venlo in the
-                    Netherlands, the focus is on practice-oriented development. In the course of this study I have
-                    further deepened my already previously developed fascination with data:
-
-                    PricewaterhouseCoopers internship - Here we implemented a 3-tier ETL architecture including BI
-                    dashboards according to Kimball for an international chemical company. To date, this project is
-                    being expanded and used as a blueprint for other departments.
-                    German crime statistics 2019 - In the third semester, we restructured the published police report
-                    using R: With the help of linear regression, we were able to prove a significant relationship
-                    between the number of suspects and the identification of the perpetrator.
-                    Currently, we are going one step further: together with the Dutch police, we are developing an
-                    AI-supported system: the goal here is to simplify and speed up documentation by identifying the
-                    correct crime category. This makes the work of officers on the street more intuitive and easier.
-                </p>
-                <p>Im always excited to learn new stuff. Currently im broadening my skills in machine learning using
-                    Python: Tensorflow, SKlearn and the pandas library</p>
-            </div>
-            <!--
-            <div class="col s4">
-                <img class="responsive-img" src="img/Omega.jpg">
-            </div>
-            -->
-            <div class="col s12">
-                <p>Kind regards, </p>
-                <img class="responsive-img" width="200" height="100" src="img/Unterschrift_transparent.png">
-            </div>
-
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="last_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="subject" type="text" class="validate">
+                        <label for="subject">Subject</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="message" type="text" class="validate">
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+            </form>
+            <button id="btn1" class="btn waves-effect blue-grey darken-2" type="button" name="action"
+                    onclick="sendEmail()">EMAIL ME
+                <i class="material-icons right">send</i>
+            </button>
         </div>
     </div>
+
 </main>
 
 <footer class="page-footer blue-grey darken-2">

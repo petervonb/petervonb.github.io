@@ -8,6 +8,8 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Peter von Bodelschwingh</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -62,11 +64,12 @@
                         <label for="email">Email</label>
                     </div>
                 </div>
+
             </form>
-            <button id="btn1" class="btn waves-effect blue-grey darken-2" type="button" name="action"
-                    onclick="sendEmail()">EMAIL ME
+            <button id="btn1" class="btn waves-effect blue-grey darken-2" type="button" onclick=sendMailContent()>Send
                 <i class="material-icons right">send</i>
             </button>
+
         </div>
     </div>
 
@@ -99,32 +102,32 @@
         </div>
     </div>
 </footer>
+
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-    function sendEmail() {
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "peter.v.b@hotmail.de",
-            Password: "FB1BE67703A824ED596786F8A676DDEBBA89",
-            To: 'peter.v.b@hotmail.de',
-            From: "peter.v.b@hotmail.de",
-            Subject: "Test email",
-            Body: "Test"
-        }).then(
-            message => alert(message)
-        );
+    function sendMailContent() {
+
+        $(document).ready(function () {
+            // When the button with the id "submit-button" is clicked
+            $('#btn1').click(function () {
+                // Get the value of the input element with the id "name"
+                var mail = $('#email').val();
+                var first_name = $('#first_name').val();
+                var last_name = $('#last_name').val();
+                var subject = $('#subject').val();
+                var message = $('#message').val();
+                MailController.sendEmail(mail, first_name, last_name, subject, message)
+            })
+        });
     }
-</script>
-<script>
-    let btn = document.getElementById("btn");
-    btn.addEventListener('click', event => {
-        sendEmail();
-    });
 
 </script>
+
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/mail-controller.js"></script>
+
 
 </body>
 

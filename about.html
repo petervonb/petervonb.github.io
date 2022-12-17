@@ -101,28 +101,7 @@
     </div>
 </footer>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function sendEmail() {
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "peter.v.b@hotmail.de",
-            Password: "FB1BE67703A824ED596786F8A676DDEBBA89",
-            To: 'peter.v.b@hotmail.de',
-            From: "peter.v.b@hotmail.de",
-            Subject: "Test email",
-            Body: "Test"
-        }).then(
-            message => alert(message)
-        );
-    }
-</script>
-<script>
-    let btn = document.getElementById("btn");
-    btn.addEventListener('click', event => {
-        sendEmail();
-    });
 
-</script>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>

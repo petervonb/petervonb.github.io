@@ -28,10 +28,9 @@
 
         <div class="row valign-wrapper">
             <div class="col s8 m8 center-align">
-                <h3>IM PETER <br> VON BODELSCHWINGH, <br>AT YOUR SERVICE!</h3>
+                <h3>I'M PETER <br> VON BODELSCHWINGH, <br>AT YOUR SERVICE!</h3>
                 <p class="grey-text">READY TO HELP WITH INFORMATICS ADVICE</p>
-                </form>
-                <button id="btn1" class="btn waves-effect blue-grey darken-2" type="button" name="action" onclick="sendEmail()">EMAIL ME
+                <button id="btn1" class="btn waves-effect blue-grey darken-2" type="button" name="action" onclick="window.location.href='contact.html';">EMAIL ME
                     <i class="material-icons right">send</i>
                 </button>
             </div>
@@ -141,7 +140,7 @@
             <h4 class="center-align white-text">PAST WORKING EXPERIENCE</h4>
             <div class="row"></div>
             <div class="row">
-                <div class="col l4">
+                <div class="col l4 m4 s4">
                     <div class="card medium">
                         <div class="card-image">
                             <img height="200" src="img/pwc.jpg" alt="">
@@ -153,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="col l4">
+                <div class="col l4 m4 s4">
                     <div class="card medium">
                         <div class="card-image">
                             <img height="200" src="img/omega_air.jpg">
@@ -165,7 +164,7 @@
                     </div>
                 </div>
 
-                <div class="col l4">
+                <div class="col l4 m4 s4">
                     <div class="card medium">
                         <div class="card-image">
                             <img height="200" src="img/fontys_out.jpg">
@@ -225,31 +224,11 @@
     </div>
 </footer>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function sendEmail() {
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "peter.v.b@hotmail.de",
-            Password: "FB1BE67703A824ED596786F8A676DDEBBA89",
-            To: 'peter.v.b@hotmail.de',
-            From: "peter.v.b@hotmail.de",
-            Subject: "Test email",
-            Body: "Test"
-        }).then(
-            message => alert(message)
-        );
-    }
-</script>
-<script>
-    let btn = document.getElementById("btn");
-    btn.addEventListener('click', event => {
-        sendEmail();
-    });
 
-</script>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
+
 
 </body>
 

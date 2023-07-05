@@ -1,4 +1,8 @@
+import resend, { Resend } from 'resend';
+const resend = new Resend('re_FfNVT9hy_32jkQB4VB4iLF4skWEVPHHGM');
+
 class MailController {
+
 
     constructor() {
     }
@@ -8,8 +12,8 @@ class MailController {
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: "peter.v.b@hotmail.de",
-            Password: "FB1BE67703A824ED596786F8A676DDEBBA89",
-            To: 'p.vonbodelschwingh@student.fontys.nl',
+            Password: "re_FfNVT9hy_32jkQB4VB4iLF4skWEVPHHGM",
+            To: 'peter.v.b@hotmail.de',
             From: from,
             Subject: subject,
             Body: body
@@ -17,4 +21,23 @@ class MailController {
             message => alert(message)
         );
     }
+
+
+    async sendEmailV2(from,first,last, subject, body) {
+        try {
+            const data = await resend.emails.send({
+                from: from,
+                to: ['peter.v.b@hotmail.de'],
+                subject: 'Hello World',
+                html: '<strong>It works!</strong>'
+            });
+
+            console.log(data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+
+
 }

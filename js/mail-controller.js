@@ -30,14 +30,12 @@ class MailController {
                 to: ['peter.v.b@hotmail.de'],
                 subject: 'Hello World',
                 html: '<strong>It works!</strong>'
-            });
+            }).then(
+                message => alert(message)
+            );
 
             console.log(data);
         } catch (error) {
             console.error(error);
         }
     }
-
-
-
-}

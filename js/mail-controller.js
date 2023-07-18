@@ -8,7 +8,7 @@ class MailController {
     }
 
 
-    static sendEmail(from,first,last, subject, body) {
+    static sendEmail(from, first, last, subject, body) {
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: "peter.v.b@hotmail.de",
@@ -23,7 +23,7 @@ class MailController {
     }
 
 
-    async sendEmailV2(from,first,last, subject, body) {
+    async sendEmailV2(from, first, last, subject, body) {
         try {
             const data = await resend.emails.send({
                 from: from,
@@ -39,3 +39,4 @@ class MailController {
             console.error(error);
         }
     }
+}
